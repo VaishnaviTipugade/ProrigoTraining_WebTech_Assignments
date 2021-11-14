@@ -1,0 +1,146 @@
+body{
+   background-color: white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+   /* background-color: rgb(253, 251, 251); */
+   width: 700px;
+   margin:0 250px 0 300px;
+   padding: 5px;
+   display : flex;
+   flex-direction: column;
+   text-align:  center;
+}
+.container>h1{
+   color: rgb(94, 11, 87);
+}
+.container > p{
+   padding: 0;
+   margin-top: 0;
+   margin-left: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 15px;
+   text-align: center;
+   line-height: 20px;
+   color: rgb(97, 91, 97);
+}
+.ratings{
+   padding: 10px;
+   margin: 25px auto;
+   background-color: rgb(245, 243, 245);
+   width:250px;
+   height: 50px;
+   border: rgba(204, 201, 201, 0.849)  solid 0.5px;
+   border-radius: 20px 0px;
+   box-shadow: 2px 2px 5px rgba(197, 194, 194, 0.623);
+   /* border-top-left-radius: 15%; */
+   /* border-bottom-right-radius: 15%; */
+}
+.ratings>p{
+   margin: 0;
+   font-size: small;
+}
+.ratings>img{
+   width: 100px;
+   margin-top: 5px;
+   margin-bottom: 10px;
+}
+
+/* REVIEW CSS */
+.reviewContainer{
+   display: flex;
+   flex-direction: row;
+   margin: 20px 0 0 0 ;
+   background-color: white;
+   width: 800px;
+}
+.review{
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(80, 30, 77);
+   color: white;
+   width: 650px;
+   height: 160px;
+   border-radius: 4%;
+   margin: 10px 7px 0 7px; 
+
+}
+.review>p{
+   color: rgb(228, 201, 226);
+   text-align: justify;
+   font-size: 13px;
+   margin: 10px 2px 2px 15px;
+   /* line-height: 10px; */
+}
+.customer{
+   display: block;
+   margin: 10px;
+}
+.customer>img{
+   width : 40px;
+   margin : 5px;
+   background-color: rgb(94, 11, 87);
+   float: left;
+   border-radius: 50%;
+}
+.cust_name{
+   color: white;
+   /* background-color: black; */
+   font-size: 15px;
+   width:80px;
+   height: 20px;
+   margin: 10px 0px 0px 10px;
+   padding-left: 5px;
+}
+.cust_subtext{
+   color:white;
+   font-size: 12px;
+   font-style: italic;
+   width: 170px;
+   height: 20px;
+   margin: 0px 0px 0px 50px;
+}
+.cust_subtext>span{
+   color: goldenrod;
+   font-style: normal;
+}
+
+/* NEWSLETTER CSS */
+.newsletter{
+   background-color: rgb(243, 176, 75);
+   color: rgb(77, 77, 77);
+   margin: 30px 0 0 -50px;
+   padding: 10px;
+   width: 900px;
+}
+.newsletter> #header{
+   /* background-color: black; */
+   margin-bottom: 0;
+   font-weight: 500;
+   font-size: 20px;
+}
+.newsletter> #text{
+   /* background-color: black; */
+   margin-top: 5px;
+}
+.newsletter>input{
+   background-color: rgb(240, 192, 119);
+   border: 0;
+   margin: 5px;
+   padding:7px;
+   font-size: 12px;
+}
+
+.newsletter>input>#Email{
+   margin: 0 10px 0 0;
+
+}
+.newsletter>input>#PhoneNo{
+   margin: 0 5px 0 5px;
+
+}
+.newsletter>button{
+   padding: 5px;
+   border: 0;
+   color: rgb(100, 98, 98);
+}
