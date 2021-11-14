@@ -1,0 +1,36 @@
+body{
+   background-color : white;
+   margin: 100px 350px;
+}
+.container{
+   background-color: rgb(190, 17, 248);
+   color: white;
+   display: flex;
+   flex-direction: column;
+   padding-top:100px;
+   width:700px;
+   height: 350px;
+   text-align: center;
+}
+
+h1{
+   color: white;
+}
+ul{
+   text-align: left;
+   font-size: 30px;
+   color: white;
+   list-style-type: square;
+   margin: 20px auto;
+}
+li{
+   /* padding: 5px; */
+   margin: 10px;
+}
+a{
+   color: white;
+   text-decoration: none;
+}
+a:hover{
+   color: rgb(244, 211, 255);
+}
