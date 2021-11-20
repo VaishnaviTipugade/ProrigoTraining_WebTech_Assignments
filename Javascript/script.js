@@ -2,18 +2,16 @@ window.onload = onpageload;
 
 var loaderComponent = document.getElementById("loader");
 var contentComponent = document.getElementById("content");
-// var clickButton = document.getElementById("clickMe");
 
 var cartItemList = [];
 
 function onpageload() {
    contentComponent.style.display = 'none';
    loaderComponent.style.display = 'none';
-   // clickButton.style.display = 'block';
-   ClickMe();
+   fetchData();
 }
 
-function ClickMe() {
+function fetchData() {
    showLoader();
 
    fetch('https://fakestoreapi.com/products')
@@ -92,7 +90,7 @@ function returnToCart(prodCheck) {
    var cart = document.getElementById("selectedItems");
    var items = "";
 
-   // UPdating List with Selected Items
+   // Updating CartItemList with Selected Items
    prodCheck.checked
       ? cartItemList.push(prodCheck.value)
       : (cartItemList = cartItemList.filter((item) => item != prodCheck.value));
@@ -102,7 +100,6 @@ function returnToCart(prodCheck) {
    }
    else {
       cartItemList.forEach(item => {
-         //var cartItem = document.createElement('p');
          items += "<p>" + item + "</p>";
       });
    }
@@ -112,11 +109,9 @@ function returnToCart(prodCheck) {
 function showLoader() {
    loaderComponent.style.display = 'block';
    contentComponent.style.display = 'none';
-   // clickButton.style.display = 'block';
 }
 
 function showContents() {
    loaderComponent.style.display = 'none';
    contentComponent.style.display = 'block';
-   // clickButton.style.display = 'none';
 }
