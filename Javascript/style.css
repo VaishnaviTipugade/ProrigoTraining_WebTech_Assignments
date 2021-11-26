@@ -115,12 +115,57 @@ input[type='checkbox']:checked:after {
    position: sticky;
    top: 0;
 }
+#rightContainer>h2{
+   position: fixed;
+   right: 20px;
+   bottom: 10px;
+   align-self: flex-end;
+   font-size: 20px;
+   background-color: rgb(10, 194, 10);
+   width: 150px;
+   padding: 10px;
+}
+#rightContainer #totalPrice{
+   margin-left: 30px;
+   font-size: 25px;
+}
+#rightContainer #cartHeader{
+   display: flex;
+   flex-direction: row;
+}
+#itemHeader{
+   width: 250px;
+   margin: 15px 0px 15px 30px;
+}
+#priceHeader{
+   margin: 15px 0px 15px 0px;
+   position: absolute;
+   right: 75px;
+}
+#rightContainer #cart{
+   display: flex;
+   flex-direction: row;
+}
 #rightContainer #selectedItems{
-   margin: 10px;
+   margin:10px;
+   width:70%;
 }
 #selectedItems p{
+   height: 50px;
    margin-left: 15px;
    margin-bottom: 5px;
    line-height: 25px;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   border-bottom: 1px solid black;
+}
+#rightContainer #itemsPrice{
+   margin: 10px 0px 0px 20px;
+}
+#itemsPrice>p{
+   margin: 0px 0px 5px 0px;
+   height: 50px;
+   width: 60px;
+   text-align: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   border-bottom: 1px solid black;
 }

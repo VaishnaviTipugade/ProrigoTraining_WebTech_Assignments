@@ -9,7 +9,7 @@
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-   <title>Document</title>
+   <title>Shopping Site</title>
 </head>
 
 <body>
@@ -20,7 +20,15 @@
       </div>
       <div id="rightContainer">
          <h3>CART</h3>
-         <div id="selectedItems"></div>
+         <div id="cartHeader">
+            <h4 id="itemHeader">Your Cart Items:</h4>
+            <h4 id="priceHeader">Price:</h4>
+         </div>
+         <div id="cart">
+            <div id="selectedItems">Empty</div>
+            <div id="itemsPrice">Empty</div>
+         </div>
+         <h2>Total : <span id="totalPrice">$0.00</span></h3>
       </div>
 </body>
 

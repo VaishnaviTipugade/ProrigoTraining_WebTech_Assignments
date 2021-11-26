@@ -4,6 +4,7 @@ var loaderComponent = document.getElementById("loader");
 var contentComponent = document.getElementById("content");
 
 var cartItemList = [];
+var cartItemPriceList = [];
 
 function onpageload() {
    contentComponent.style.display = 'none';
@@ -23,7 +24,6 @@ function fetchData() {
 
 function buildProductsList(products) {
    showContents();
-   console.log("inside buildProductsList");
    var productListContainer = document.createElement('div');
    productListContainer.id = "prodListContainer";
    contentComponent.appendChild(productListContainer);
@@ -35,9 +35,9 @@ function buildProductsList(products) {
       var prodCheck = document.createElement('input');
       prodCheck.type = 'checkbox';
       prodCheck.name = 'prodCheck';
-      prodCheck.value = product.title;
+      prodCheck.value = product.title + "separator" + product.price;
       prodCheck.className = "checkbox";
-      // prodCheck.onchange = returnToCart(prodCheck, cartItems);
+
       prodCheck.setAttribute("onchange", "returnToCart(this)");
 
       var productImage = document.createElement('img');
@@ -85,25 +85,38 @@ function buildProductsList(products) {
 }
 
 function returnToCart(prodCheck) {
-   console.log('inside returnToCart')
+
+   var prodCheckArr = prodCheck.value.split('separator');
 
    var cart = document.getElementById("selectedItems");
+   var itemsPrice = document.getElementById("itemsPrice");
+   var totalPrice = document.getElementById("totalPrice");
+
    var items = "";
+   var prices = "";
+   var total = 0;
 
-   // Updating CartItemList with Selected Items
+   // Updating List with Selected Items
    prodCheck.checked
-      ? cartItemList.push(prodCheck.value)
-      : (cartItemList = cartItemList.filter((item) => item != prodCheck.value));
+      ? cartItemList.push(prodCheckArr[0]) && cartItemPriceList.push(prodCheckArr[1])
+      : (cartItemList = cartItemList.filter((item) => item != prodCheckArr[0])) && (cartItemPriceList = cartItemPriceList.filter((price) => price != prodCheckArr[1]));
 
-   if (cartItemList.length == 0) {
+   if (cartItemList.length == 0 && cartItemPriceList.length == 0) {
       items = "<p>Empty</p>";
+      prices = "<p>Empty</p>";
    }
    else {
       cartItemList.forEach(item => {
          items += "<p>" + item + "</p>";
       });
+      cartItemPriceList.forEach(price => {
+         prices += "<p>" + "$" + price + "</p>";
+         total += parseFloat(price);
+      });
    }
    cart.innerHTML = items;
+   itemsPrice.innerHTML = prices;
+   totalPrice.innerHTML = "$" + total.toFixed(2);
 }
 
 function showLoader() {
