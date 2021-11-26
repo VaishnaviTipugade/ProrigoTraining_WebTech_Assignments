@@ -8,3 +8,6 @@
   - UI elements are also created dynamically using JS
   - Created Shopping Cart & user can add/remove products in/from Cart 
   - completed UI design images are added : myAssignmnetImg1, myAssignmnetImg2
+
+#### Extra Feature : 
+  - Calculating Total pPrice of the Cart 
