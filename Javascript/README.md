@@ -10,4 +10,4 @@
   - completed UI design images are added : myAssignmnetImg1, myAssignmnetImg2
 
 #### Extra Feature : 
-  - Calculating Total pPrice of the Cart 
+  - Calculating Total Price of the Cart 
